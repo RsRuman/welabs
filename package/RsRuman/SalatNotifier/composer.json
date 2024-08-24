@@ -1,0 +1,22 @@
+{
+    "name": "rsruman/salat-notifier",
+    "autoload": {
+        "psr-4": {
+            "RsRuman\\SalatNotifier\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RumanBD",
+            "email": "rsbdruman@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RsRuman\\SalatNotifier\\SalatServiceProvider"
+            ]
+        }
+    }
+}
