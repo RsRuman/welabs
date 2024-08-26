@@ -3,6 +3,8 @@
 namespace RsRuman\SalatNotifier\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Notification;
+use RsRuman\SalatNotifier\Notifications\SalatNotification;
 
 class SalatNotify extends Command
 {
@@ -25,6 +27,7 @@ class SalatNotify extends Command
      */
     public function handle()
     {
+        Notification::route('slack', env('SLACK_BOT_USER_DEFAULT_CHANNEL'))->notify(new SalatNotification());
         $this->info('Hello World!');
     }
 }

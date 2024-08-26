@@ -11,7 +11,9 @@
             "email": "rsbdruman@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/slack-notification-channel": "^3.3"
+    },
     "extra": {
         "laravel": {
             "providers": [

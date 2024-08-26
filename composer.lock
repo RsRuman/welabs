@@ -1376,6 +1376,71 @@
             "time": "2024-08-02T07:48:17+00:00"
         },
         {
+            "name": "laravel/slack-notification-channel",
+            "version": "v3.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/slack-notification-channel.git",
+                "reference": "fc8f931b9ae868945cf0c39aeda71f1cbe180484"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/slack-notification-channel/zipball/fc8f931b9ae868945cf0c39aeda71f1cbe180484",
+                "reference": "fc8f931b9ae868945cf0c39aeda71f1cbe180484",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.0",
+                "illuminate/http": "^9.0|^10.0|^11.0",
+                "illuminate/notifications": "^9.0|^10.0|^11.0",
+                "illuminate/support": "^9.0|^10.0|^11.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^7.0|^8.0|^9.0",
+                "phpstan/phpstan": "^1.10",
+                "phpunit/phpunit": "^9.0|^10.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Illuminate\\Notifications\\SlackChannelServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Notifications\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Slack Notification Channel for laravel.",
+            "keywords": [
+                "laravel",
+                "notifications",
+                "slack"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/slack-notification-channel/issues",
+                "source": "https://github.com/laravel/slack-notification-channel/tree/v3.3.1"
+            },
+            "time": "2024-08-17T20:57:03+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v2.9.0",
             "source": {
@@ -3115,7 +3180,10 @@
             "dist": {
                 "type": "path",
                 "url": "./package/RsRuman/SalatNotifier",
-                "reference": "1a153d52add75f14556c9137613c1d240536a016"
+                "reference": "b4fdea15b672cd59599d17c7190b1e5b5464443a"
+            },
+            "require": {
+                "laravel/slack-notification-channel": "^3.3"
             },
             "type": "library",
             "extra": {
