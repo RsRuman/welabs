@@ -2,10 +2,12 @@
 
 namespace RsRuman\SalatNotifier\Notifications;
 
+use AllowDynamicProperties;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\SlackMessage;;
 
+#[AllowDynamicProperties]
 class SalatNotification extends Notification
 {
     use Queueable;
@@ -13,9 +15,10 @@ class SalatNotification extends Notification
     /**
      * Create a new notification instance.
      */
-    public function __construct()
+    public function __construct($name, $time)
     {
-        //
+        $this->name = $name;
+        $this->time = $time;
     }
 
     /**
@@ -34,8 +37,6 @@ class SalatNotification extends Notification
     public function toSlack(object $notifiable): SlackMessage
     {
         return (new SlackMessage)
-            ->content('Salat time for Fajar')
-            ->content('Start at: ')
-            ->content('Please be prepare.');
+            ->content("Reminder: Today's {$this->name} time start on {$this->time}. Please prepare.");
     }
 }
