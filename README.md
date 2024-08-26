@@ -9,7 +9,7 @@ Please Follow the guideline to set up locally.
 2. cp .env.example .env
 3. update variable APP_TIMEZONE=Asia/Dhaka in .env
 4. set variable in .env
-   SLACK_BOT_USER_DEFAULT_CHANNEL
+   SLACK_BOT_USER_DEFAULT_CHANNEL and
    SLACK_BOT_USER_OAUTH_TOKEN
 5. php artisan key:generate
 6. set database mysql and update related things in .env (for example your database name, password) or set DB_CONNECTION=sqlite
